@@ -1,0 +1,50 @@
+.loading_box {
+  background-color: #f5f6f7;
+  height: 100vh;
+  &::before {
+    content: "";
+    display: table;
+  }
+
+  &_content {
+    background-color: #ffffff;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    margin: 8px 16px 0;
+    height: calc(100% - 8px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    img {
+      width: 100px;
+      height: 100px;
+      margin-top: 146px;
+    }
+
+    .text1 {
+      //styleName: 移动端/正文;
+      font-family: PingFang SC;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 22px;
+      letter-spacing: 0em;
+      text-align: center;
+      color: #1f2329;
+      margin-top: 16px;
+    }
+
+    .text2 {
+      //styleName: 移动端/正文;
+      font-family: PingFang SC;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 22px;
+      letter-spacing: 0em;
+      text-align: center;
+      color: #8f959e;
+      margin-top: 8px;
+    }
+  }
+}
+

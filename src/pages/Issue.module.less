@@ -1,0 +1,126 @@
+.issue {
+  display: flex;
+  flex-direction: column;
+  background-color: #f5f6f7;
+  height: 100vh;
+
+  &_header {
+    width: calc(100% - 32px);
+    background-color: #ffffff;
+    padding: 12px 16px;
+  }
+  &_content {
+    flex: 1;
+    margin: 8px 16px 0;
+    background-color: #ffffff;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin-top: 12px;
+
+      .text {
+        font-family: PingFang SC;
+        font-size: 16px;
+        font-weight: 400;
+        text-align: center;
+        line-height: 22px;
+        color: #3370ff;
+        width: 80%;
+        word-break: break-all;
+      }
+      .text1 {
+        font-family: PingFang SC;
+        font-size: 16px;
+        font-weight: 400;
+        text-align: center;
+        line-height: 22px;
+        color: #1f2329;
+        word-break: break-all;
+      }
+
+      .btn_issue {
+        margin-top: 16px;
+        border-radius: 22px;
+        width: 92px;
+        background: #3370ff;
+        color: #ffffff;
+        padding: 7px 14px;
+        font-size: 16px;
+        text-align: center;
+        cursor: pointer;
+        font-weight: 400;
+      }
+    }
+  }
+
+  &_content_desc {
+    background-color: #ffffff;
+    border-radius: 8px;
+    margin: 8px 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .desc_list {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 6px 0;
+
+      .item {
+        display: flex;
+        align-items: center;
+        margin: 10px 0;
+
+        .text {
+          margin-left: 6px;
+          height: 20px;
+          line-height: 20px;
+          font-size: 14px;
+          color: #8f959e;
+        }
+      }
+    }
+  }
+}
+
+:global {
+  .semi-banner-info {
+    background-color: #f0fbef;
+    padding: 8px 16px;
+
+    .semi-banner-content-wrapper {
+      .semi-banner-content {
+        justify-content: flex-start;
+
+        .semi-banner-content-body {
+          .semi-banner-description {
+            color: #34c724 !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+:global {
+  .semi-spin-middle {
+    width: 100vw;
+    height: 100vh;
+    background: transparent;
+    position: fixed;
+
+    .semi-spin-wrapper {
+      top: 20%;
+    }
+  }
+}

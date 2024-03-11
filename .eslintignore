@@ -1,0 +1,10 @@
+node_modules
+build/*.js
+src/assets
+public
+dist
+.eslintrc.js
+postcss.config.js
+components.d.ts
+vite.config.ts
+scripts/

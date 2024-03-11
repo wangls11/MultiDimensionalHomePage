@@ -1,0 +1,317 @@
+.homePage {
+  height: 100%;
+  overflow: hidden;
+  overflow-y: auto;
+
+  .image {
+    position: fixed;
+    z-index: -1;
+    top: 71px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+  }
+
+  .header {
+    margin-top: 106px;
+    height: 42px;
+    padding: 0 16px 20px;
+    line-height: 74px;
+    box-shadow: 0px 8px 8px -4px #539bde08;
+    box-shadow: 0px 20px 24px -4px #6f92c614;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    .gradual_bg {
+      position: absolute;
+      height: 120px;
+      width: 100%;
+      left: 0;
+      right: 0;
+      z-index: -1;
+    }
+
+    &_text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      font-family: PingFang SC;
+
+      &_one {
+        font-size: 20px;
+        color: #4950b6;
+        line-height: 22px;
+        margin-bottom: 3px;
+        font-weight: 700;
+      }
+      &_two {
+        font-size: 14px;
+        color: #4950b6;
+        line-height: 17px;
+      }
+    }
+  }
+
+  .panel_content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 16px 0 0;
+    background-color: #f5f6f7;
+    height: 100%;
+
+    .KongKimArea {
+      margin: 12px 16px;
+      padding: 16px;
+      border-radius: 12px;
+      box-shadow: 0px 8px 8px -4px #539bde08;
+      box-shadow: 0px 20px 24px -4px #6f92c614;
+      background-color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+
+      .item {
+        // width: 60px;
+        padding: 4px 4px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        margin: 0 12px;
+
+        .text {
+          color: #77838f;
+          font-size: 14px;
+        }
+
+        .imageIcon {
+          width: 40px;
+          height: 40px;
+          margin-bottom: 4px;
+        }
+      }
+    }
+
+    .instrumentPanel {
+      margin: 12px 16px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+
+      .aside {
+        width: 32px;
+        height: 32px;
+        border-radius: 32px;
+        background-color: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0px 8px 8px -4px #539bde08;
+        box-shadow: 0px 20px 24px -4px #6f92c614;
+      }
+
+      .content {
+        height: 32px;
+        padding: 0 16px;
+        border-radius: 8px;
+        flex: 1;
+        background-color: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-left: 8px;
+        box-shadow: 0px 8px 8px -4px #539bde08;
+        box-shadow: 0px 20px 24px -4px #6f92c614;
+      }
+    }
+
+    .iframe {
+      width: 100%;
+      flex: 1;
+      border: 0;
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+    }
+  }
+}
+
+.panel {
+  margin: 0 16px;
+  height: calc(100% - 32px);
+  box-shadow: 0px 8px 8px -4px #539bde08;
+  box-shadow: 0px 20px 24px -4px #6f92c614;
+  position: relative;
+  overflow: hidden;
+  overflow-y: auto;
+
+  .panelItem {
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    cursor: pointer;
+    margin-bottom: 12px;
+    background-color: #ffffff;
+    border-radius: 8px;
+  }
+
+  .panelItemSelect {
+    border-radius: 8px;
+    background-color: #d6e2ff;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 12px;
+  }
+}
+
+:global {
+  .semi-sidesheet-content {
+    .semi-sidesheet-body {
+      padding: 0;
+    }
+    .semi-sidesheet-title {
+      font-size: 16px;
+      font-family: PingFang SC;
+      font-weight: 700;
+    }
+  }
+}
+
+.empty {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.left {
+  width: calc(100% - 32px);
+  background-color: #ffffff;
+  padding: 4px 16px;
+}
+
+.main {
+  height: 100vh;
+  width: 100vw;
+
+  .issue {
+    background-color: #e9effe;
+    padding: 8px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+
+    &_text {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: #3370ff;
+      font-size: 14px;
+
+      .free {
+        border: 1px solid #94bfff;
+        border-radius: 2px;
+        padding: 1px 4px;
+        color: #3370ff;
+        font-size: 12px;
+        margin-right: 6px;
+      }
+    }
+
+    .issueBtn {
+      border-radius: 20px;
+      height: 24px;
+      line-height: 24px;
+      width: 64px;
+      background: #3370ff;
+      text-align: center;
+      font-size: 12px;
+      color: #ffffff;
+      cursor: pointer;
+
+      .hint {
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        right: 10px;
+      }
+    }
+  }
+
+  .content {
+    height: calc(100% - 130px);
+  }
+  .footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    margin: auto;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #1f232926;
+    background-color: white;
+
+    &__item {
+      height: 100%;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+
+      .imageIcon {
+        width: 24px;
+        height: 24px;
+        margin-bottom: 6px;
+      }
+    }
+  }
+}
+
+.skeleton {
+  padding: 106px 16px 16px;
+  position: relative;
+  height: calc(100vh - 124px);
+
+  .KongKimArea {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f5f6f7;
+    padding: 16px;
+    margin-bottom: 28px;
+  }
+  .footer {
+    width: calc(100% - 32px);
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 16px;
+  }
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+:global {
+  .semi-sidesheet {
+    .semi-sidesheet-mask {
+      background-color: transparent;
+    }
+  }
+}
+
