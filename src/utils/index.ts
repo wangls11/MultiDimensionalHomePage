@@ -2,6 +2,7 @@ import {
   FieldType,
   IAttachmentField,
   IOpenUrlSegment,
+  ViewType,
   bitable,
 } from "@lark-base-open/js-sdk";
 import { getIcons } from "../api";
@@ -60,10 +61,22 @@ export const getTableDate = async () => {
 
   const table = await getTable();
 
-  const selection = await bitable.base.getSelection();
+  const viewList = await table.getViewList();
 
-  const viewId = selection.viewId ? selection.viewId : "";
-  const view = await table.getViewById(viewId);
+  const viewIdList = viewList.map((item) => {
+    return item.id;
+  });
+
+  const currentView = await viewIdList.filter(async (viewId) => {
+    const viewMeta = await table.getViewMetaById(viewId);
+    if (viewMeta.name === "表格") {
+      return true;
+    } else {
+      return false;
+    }
+  });
+
+  const view = await table.getViewById(currentView[0]);
 
   // 设置表所有记录
   const recordList = await view.getVisibleRecordIdList();
@@ -250,7 +263,7 @@ export const createBottomTable = async () => {
   } = await initDate();
 
   // 新建子表
-  const { tableId, index } = await bitable.base.addTable({
+  const { tableId } = await bitable.base.addTable({
     name: tableName,
     fields: [
       {
@@ -259,6 +272,7 @@ export const createBottomTable = async () => {
       },
     ],
   });
+
   const table = await bitable.base.getTableById(tableId);
 
   const fieldIdList = await table.getFieldMetaList();
