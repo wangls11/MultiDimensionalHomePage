@@ -4,9 +4,6 @@ declare module "*.less" {
   export default content;
 }
 
-declare module "@lark-open/blockit-api";
-
 declare module "*.png";
-
 declare module "*.svg";
 declare module "*.gif";
