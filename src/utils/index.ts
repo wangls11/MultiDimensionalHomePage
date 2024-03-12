@@ -67,7 +67,7 @@ export const getTableDate = async () => {
     return item.id;
   });
 
-  const currentView = await viewIdList.filter(async (viewId) => {
+  const currentView = viewIdList.filter(async (viewId) => {
     const viewMeta = await table.getViewMetaById(viewId);
     if (viewMeta.name === "表格") {
       return true;
@@ -75,6 +75,8 @@ export const getTableDate = async () => {
       return false;
     }
   });
+
+  console.log(currentView, 89899);
 
   const view = await table.getViewById(currentView[0]);
 
