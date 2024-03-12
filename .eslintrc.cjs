@@ -24,17 +24,13 @@ module.exports = {
     ecmaVersion: "latest",
     sourceType: "module",
   },
-  compilerOptions: {
-    jsx: "react",
-  },
   plugins: ["@typescript-eslint", "react"],
   rules: {
     "no-console": "off",
     "no-debugger": "off",
     "no-irregular-whitespace": "off", //这禁止掉 空格报错检查
-    "no-unused-vars": "off",
     "react/react-in-jsx-scope": 0,
     "@typescript-eslint/no-explicit-any": 0,
+    "@typescript-eslint/no-unused-vars": 0,
   },
 };
-

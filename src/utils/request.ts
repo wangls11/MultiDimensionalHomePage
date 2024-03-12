@@ -19,8 +19,8 @@ instance.interceptors.request.use(
   }
 );
 
-let isRefreshing = false;
-let requestList: Array<(token: string) => void> = [];
+const isRefreshing = false;
+const requestList: Array<(token: string) => void> = [];
 // 添加响应拦截器
 instance.interceptors.response.use(
   async function (response) {

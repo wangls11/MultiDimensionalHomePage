@@ -104,7 +104,7 @@ export const getTableDate = async () => {
   let crmList: { title: string; url: string; iconFile: string; id: string }[] =
     [];
   // 仪表盘数据
-  let instrumentPanel: { title: string; url: string; id: string }[] = [];
+  const instrumentPanel: { title: string; url: string; id: string }[] = [];
   // 应用名称
   let appNameInfo: string = "";
   // 应用介绍
