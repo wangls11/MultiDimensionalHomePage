@@ -54,51 +54,47 @@
     }
   }
 
+  .KongKimArea {
+    padding: 16px;
+    border-radius: 12px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    .item {
+      // width: 60px;
+      padding: 4px 4px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+
+      .text {
+        color: #77838f;
+        font-size: 14px;
+        max-width: 4em;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+
+      .imageIcon {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 4px;
+      }
+    }
+  }
+
   .panel_content {
     flex: 1;
     display: flex;
     flex-direction: column;
-    padding: 16px 0 0;
     background-color: #f5f6f7;
     height: 100%;
-
-    .KongKimArea {
-      margin: 12px 16px;
-      padding: 16px;
-      border-radius: 12px;
-      box-shadow: 0px 8px 8px -4px #539bde08;
-      box-shadow: 0px 20px 24px -4px #6f92c614;
-      background-color: #ffffff;
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      flex-wrap: wrap;
-      gap: 12px;
-
-      .item {
-        // width: 60px;
-        padding: 4px 4px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-
-        .text {
-          color: #77838f;
-          font-size: 14px;
-          max-width: 4em;
-          overflow: hidden;
-          white-space: nowrap;
-        }
-
-        .imageIcon {
-          width: 40px;
-          height: 40px;
-          margin-bottom: 4px;
-        }
-      }
-    }
 
     .instrumentPanel {
       margin: 12px 16px;

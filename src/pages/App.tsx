@@ -3,7 +3,7 @@ import a from "./App.module.less";
 import { getTableDate, getTable, createBottomTable } from "../utils";
 import { SideSheet, Skeleton } from "@douyinfe/semi-ui";
 import home_logo from "../assets/icon/home_logo.svg";
-import app_pg from "../assets/icon/app_bg.svg";
+import app_pg from "../assets/icon/app_bg.png";
 import hint from "../assets/icon/hint.svg";
 import pc_app_pg from "../assets/icon/pc_app_bg.svg";
 import aside from "../assets/icon/aside.svg";
@@ -47,6 +47,8 @@ export const App = () => {
   // 模板地址
   const [moduleUrl, setModuleUrl] = useState<string>("");
   const panelRef = useRef<HTMLDivElement>(null);
+  const kongKimArea = useRef<HTMLDivElement>(null);
+
   // 圆角消失bol
   const [radiusBol, setRadiusBol] = useState<boolean>(false);
 
@@ -282,8 +284,13 @@ export const App = () => {
                 <span className={a.header_text_two}>{appIntroduce}</span>
               </div>
             </div>
-            <div ref={panelRef} className={a.panel_content}>
-              <div className={a.KongKimArea}>
+            <div
+              style={{
+                backgroundColor: "#f5f6f7",
+                padding: "16px 16px 12px",
+              }}
+            >
+              <div ref={kongKimArea} className={a.KongKimArea}>
                 {crmListDate.length ? (
                   crmListDate?.map((item, index) => {
                     return (
@@ -309,6 +316,8 @@ export const App = () => {
                   <div className={a.empty}>暂无数据</div>
                 )}
               </div>
+            </div>
+            <div ref={panelRef} className={a.panel_content}>
               <div
                 className={a.instrumentPanel}
                 onClick={(event) => {
@@ -369,4 +378,3 @@ export const App = () => {
     </Skeleton>
   );
 };
-

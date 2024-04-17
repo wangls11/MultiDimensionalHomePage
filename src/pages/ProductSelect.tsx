@@ -70,7 +70,7 @@ export const ProductSelect = () => {
               alt=""
               style={{ marginRight: "8px", width: "16px", height: "16px" }}
             />
-            <span>帮助我们</span>
+            <span>帮助文档</span>
           </div>
           <div
             className={p.contact}
