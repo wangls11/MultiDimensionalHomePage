@@ -76,12 +76,12 @@ export const getTableDate = async () => {
     }
   });
 
-  console.log(currentView, 89899);
-
   const view = await table.getViewById(currentView[0]);
 
   // 设置表所有记录
-  const recordList = await view.getVisibleRecordIdList();
+  // const recordList = await view.getVisibleRecordIdList();
+  const { recordIds } = await view.getVisibleRecordIdListByPage({});
+
   // 记录所有字段信息
   const fieldInfo = await table.getFieldMetaList();
   // 父记录FieldId
@@ -117,9 +117,9 @@ export const getTableDate = async () => {
   // 背景图片
   let backgroundImageUrl: string = "";
 
-  const recordLists = recordList
+  const recordLists = recordIds
     ? await Promise.all(
-        recordList.map(async (item) => {
+        recordIds.map(async (item) => {
           return await table.getRecordById(item ? item : "");
         })
       )
@@ -137,7 +137,7 @@ export const getTableDate = async () => {
               ? res.fields[linkUrlFieldId][0].link
               : "",
             iconFile: res.fields[iconFieldId] ? res.fields[iconFieldId] : "",
-            id: recordList[index] as string,
+            id: recordIds[index] as string,
           });
           break;
         case bottomBarName:
@@ -149,7 +149,7 @@ export const getTableDate = async () => {
               ? res.fields[linkUrlFieldId][0].link
               : "",
             iconFile: res.fields[iconFieldId] ? res.fields[iconFieldId] : "",
-            id: recordList[index] as string,
+            id: recordIds[index] as string,
           });
           break;
         case instrumentPanelName:
@@ -160,7 +160,7 @@ export const getTableDate = async () => {
             url: res.fields[linkUrlFieldId]
               ? res.fields[linkUrlFieldId][0].link
               : "",
-            id: recordList[index] as string,
+            id: recordIds[index] as string,
           });
           break;
         case appName:
